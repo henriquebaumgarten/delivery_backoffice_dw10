@@ -1,6 +1,6 @@
 # delivery_backoffice_dw10
 
-A new Flutter project.
+Fontes que eu estou transcrevendo da aula do Rodrigo Rahman da academia do flutter IDW 10
 
 ## Getting Started
 
