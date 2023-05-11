@@ -32,6 +32,8 @@ class BaseHeader extends StatelessWidget {
               child: SizedBox(
                 width: constrains.maxWidth * .15,
                 child: TextFormField(
+                  // autocorrect: true,
+                  // autofocus: false,
                   onChanged: searchChange,
                   decoration: InputDecoration(
                     isDense: true,
@@ -42,7 +44,8 @@ class BaseHeader extends StatelessWidget {
                     ),
                     label: Text(
                       'Buscar',
-                      style: context.textStyle.textRegular.copyWith(fontSize: 12, color: Colors.grey),
+                      style: context.textStyle.textRegular
+                          .copyWith(fontSize: 12, color: Colors.grey),
                     ),
                   ),
                 ),
