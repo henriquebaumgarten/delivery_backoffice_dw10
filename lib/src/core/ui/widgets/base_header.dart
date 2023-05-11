@@ -34,6 +34,7 @@ class BaseHeader extends StatelessWidget {
                 child: TextFormField(
                   // autocorrect: true,
                   // autofocus: false,
+                  enableInteractiveSelection: false,
                   onChanged: searchChange,
                   decoration: InputDecoration(
                     isDense: true,
