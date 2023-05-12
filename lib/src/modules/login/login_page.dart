@@ -125,7 +125,8 @@ class _LoginPageState extends State<LoginPage> with Loader, Messages {
                         TextFormField(
                           controller: emailEC,
                           onFieldSubmitted: (_) => _formSubmit(),
-                          decoration: const InputDecoration(labelText: 'E-mail'),
+                          decoration:
+                              const InputDecoration(labelText: 'E-mail'),
                           validator: Validatorless.multiple([
                             Validatorless.required('Email obrigatório'),
                             Validatorless.email('Email invalido'),
@@ -139,7 +140,8 @@ class _LoginPageState extends State<LoginPage> with Loader, Messages {
                           obscureText: true,
                           onFieldSubmitted: (_) => _formSubmit(),
                           decoration: const InputDecoration(labelText: 'Senha'),
-                          validator: Validatorless.required('Senha obrigatória'),
+                          validator:
+                              Validatorless.required('Senha obrigatória'),
                         ),
                         const SizedBox(
                           height: 30,

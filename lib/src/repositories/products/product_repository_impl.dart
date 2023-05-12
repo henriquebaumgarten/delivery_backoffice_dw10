@@ -85,7 +85,8 @@ class ProductRepositoryImpl implements ProductRepository {
   Future<String> uploadImageProduct(Uint8List file, String filename) async {
     try {
       final formdata = FormData.fromMap(
-          {'file': MultipartFile.fromBytes(file, filename: filename)});
+        {'file': MultipartFile.fromBytes(file, filename: filename)},
+      );
       final response = await _dio.auth().post('/uploads', data: formdata);
       return response.data['url'];
     } on DioError catch (e, s) {

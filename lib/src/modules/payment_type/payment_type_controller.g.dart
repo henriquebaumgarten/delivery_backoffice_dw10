@@ -64,7 +64,9 @@ mixin _$PaymentTypeController on PaymentTypeControllerBase, Store {
   }
 
   late final _$_paymentTypeSelectedAtom = Atom(
-      name: 'PaymentTypeControllerBase._paymentTypeSelected', context: context);
+    name: 'PaymentTypeControllerBase._paymentTypeSelected',
+    context: context,
+  );
 
   PaymentTypeModel? get paymentTypeSelected {
     _$_paymentTypeSelectedAtom.reportRead();
@@ -128,13 +130,16 @@ mixin _$PaymentTypeController on PaymentTypeControllerBase, Store {
       AsyncAction('PaymentTypeControllerBase.savePayment', context: context);
 
   @override
-  Future<void> savePayment(
-      {int? id,
-      required String name,
-      required String acronym,
-      required bool enabled}) {
-    return _$savePaymentAsyncAction.run(() => super
-        .savePayment(id: id, name: name, acronym: acronym, enabled: enabled));
+  Future<void> savePayment({
+    int? id,
+    required String name,
+    required String acronym,
+    required bool enabled,
+  }) {
+    return _$savePaymentAsyncAction.run(
+      () => super
+          .savePayment(id: id, name: name, acronym: acronym, enabled: enabled),
+    );
   }
 
   late final _$PaymentTypeControllerBaseActionController =

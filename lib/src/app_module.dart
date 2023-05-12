@@ -22,7 +22,8 @@ class AppModule extends Module {
           transition: TransitionType.noTransition,
           children: [
             ModuleRoute('/payment-type', module: PaymentTypeModule()),
-            ModuleRoute('/products', module: ProductsModule())
+            ModuleRoute('/products', module: ProductsModule()),
+            // ModuleRoute('/products/detail', module: ProductdetailModule()))
           ],
         ),
       ];
