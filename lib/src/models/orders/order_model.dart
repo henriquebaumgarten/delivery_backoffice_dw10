@@ -9,7 +9,7 @@ class OrderModel {
   final int id;
   final DateTime date;
   final OrderStatus status;
-  final List<OrderProductModel> orderProduct;
+  final List<OrderProductModel> orderProducts;
   final int userId;
   final String address;
   final String cpf;
@@ -19,7 +19,7 @@ class OrderModel {
     required this.id,
     required this.date,
     required this.status,
-    required this.orderProduct,
+    required this.orderProducts,
     required this.userId,
     required this.address,
     required this.cpf,
@@ -31,7 +31,7 @@ class OrderModel {
       'id': id,
       'date': date.toIso8601String(),
       'status': status.acroym,
-      'orderProduct': orderProduct.map((x) => x.toMap()).toList(),
+      'orderProduct': orderProducts.map((x) => x.toMap()).toList(),
       'userId': userId,
       'address': address,
       'cpf': cpf,
@@ -44,7 +44,7 @@ class OrderModel {
       id: (map['id'] ?? 0) as int,
       date: DateTime.parse((map['date'])),
       status: OrderStatus.parse(map['status']),
-      orderProduct: List<OrderProductModel>.from(
+      orderProducts: List<OrderProductModel>.from(
         (map['products']).map<OrderProductModel>(
           (x) => OrderProductModel.fromMap(x as Map<String, dynamic>),
         ),
