@@ -82,8 +82,9 @@ mixin _$ProductDetailController on ProductDetailControllerBase, Store {
   }
 
   late final _$uploadImageProductAsyncAction = AsyncAction(
-      'ProductDetailControllerBase.uploadImageProduct',
-      context: context);
+    'ProductDetailControllerBase.uploadImageProduct',
+    context: context,
+  );
 
   @override
   Future<void> uploadImageProduct(Uint8List file, String fileName) {
@@ -105,6 +106,16 @@ mixin _$ProductDetailController on ProductDetailControllerBase, Store {
   @override
   Future<void> loadProduct(int? id) {
     return _$loadProductAsyncAction.run(() => super.loadProduct(id));
+  }
+
+  late final _$deleteProductAsyncAction = AsyncAction(
+    'ProductDetailControllerBase.deleteProduct',
+    context: context,
+  );
+
+  @override
+  Future<void> deleteProduct() {
+    return _$deleteProductAsyncAction.run(() => super.deleteProduct());
   }
 
   @override
