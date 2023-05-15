@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> with Loader, Messages {
               alignment: Alignment.center,
               child: Container(
                 constraints: BoxConstraints(
-                  maxWidth: context.percentWidht(screenWidht < 1300 ? .7 : .3),
+                  maxWidth: context.percentWidht(screenWidht < 1200 ? .7 : .3),
                   //maxHeight: context.percentHeight(.4),
                 ),
                 decoration: BoxDecoration(

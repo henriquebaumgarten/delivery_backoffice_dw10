@@ -10,7 +10,7 @@ import 'order_page.dart';
 class OrderModule extends Module {
   @override
   List<Bind> get binds => [
-        Bind.singleton<OrderRepository>((i) => OrderRepositoryImpl(i())),
+        Bind.lazySingleton<OrderRepository>((i) => OrderRepositoryImpl(i())),
         Bind.lazySingleton<GetOrderById>(
           (i) => GetOrderByIdImpl(i(), i(), i()),
         ),

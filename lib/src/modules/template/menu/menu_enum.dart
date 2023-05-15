@@ -1,21 +1,21 @@
 enum Menu {
   paymentType(
-    '/payment-type/',
+    '/payment-types/',
     'payment_type_ico.png',
     'payment_type_ico_selected.png',
-    'Administrar forma de pagamento',
+    'Administrar Forma de Pagamento',
   ),
   products(
     '/products/',
     'product_ico.png',
     'product_ico_selected.png',
-    'Administrar produto',
+    'Administrar Produto',
   ),
   orders(
     '/orders/',
     'order_ico.png',
     'order_ico_selected.png',
-    'Pedidos do dia',
+    'Pedidos do Dia',
   );
 
   final String route;

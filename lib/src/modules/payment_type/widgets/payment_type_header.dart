@@ -18,7 +18,7 @@ class _PaymentTypeHeaderState extends State<PaymentTypeHeader> {
   @override
   Widget build(BuildContext context) {
     return BaseHeader(
-      title: 'Administrar formas de pagamento',
+      title: 'Administrar Formas de Pagamento',
       buttonLabel: 'Adicionar',
       buttonPressed: () {
         widget.controller.addPayment();

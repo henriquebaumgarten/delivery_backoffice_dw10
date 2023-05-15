@@ -20,7 +20,7 @@ class _OrderHeaderState extends State<OrderHeader> {
       title: 'Administrar Pedidos',
       addButton: false,
       filterWidget: DropdownButton<OrderStatus>(
-        value: null,
+        value: statusSelected,
         items: [
           const DropdownMenuItem(
             value: null,
