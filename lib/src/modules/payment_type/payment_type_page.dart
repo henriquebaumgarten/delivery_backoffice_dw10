@@ -17,9 +17,10 @@ class PaymentTypePage extends StatefulWidget {
   State<PaymentTypePage> createState() => _PaymentTypePageState();
 }
 
-class _PaymentTypePageState extends State<PaymentTypePage> with Loader, Messages {
+class _PaymentTypePageState extends State<PaymentTypePage>
+    with Loader, Messages {
   final controller = Modular.get<PaymentTypeController>();
-  final disposers = <ReactionDisposer>[];
+  late final disposers = <ReactionDisposer>[];
 
   @override
   void initState() {
@@ -41,7 +42,9 @@ class _PaymentTypePageState extends State<PaymentTypePage> with Loader, Messages
             break;
           case PaymentTypeStateStatus.error:
             hideLoader();
-            showError(controller.errorMessage ?? 'Erro ao buscar forma de pagamentos');
+            showError(
+              controller.errorMessage ?? 'Erro ao buscar forma de pagamentos',
+            );
             break;
           case PaymentTypeStateStatus.addOrUpdatePayment:
             hideLoader();
