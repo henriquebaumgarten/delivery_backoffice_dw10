@@ -23,7 +23,7 @@ class GetOrderByIdImpl implements GetOrderById {
   Future<OrderDto> call(OrderModel order) => _orderDtoParse(order);
 
   Future<OrderDto> _orderDtoParse(OrderModel order) async {
-    final start = DateTime.now();
+    // final start = DateTime.now();
     final paymentTypeFuture =
         _paymentTypeRepository.getById(order.paymentTypeId);
     final userFuture = _userRepository.getById(order.userId);
@@ -34,9 +34,9 @@ class GetOrderByIdImpl implements GetOrderById {
       userFuture,
       orderProductsFuture,
     ]);
-    print(
-      'Calculando tempo: ${DateTime.now().difference(start).inMilliseconds}',
-    );
+    //rint(
+    //'Calculando tempo: ${DateTime.now().difference(start).inMilliseconds}',
+    //);
     return OrderDto(
       id: order.id,
       date: order.date,

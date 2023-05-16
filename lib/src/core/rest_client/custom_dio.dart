@@ -27,7 +27,10 @@ class CustomDio extends DioForBrowser {
   }
 
   CustomDio auth() {
-    interceptors.add(_authInterceptor);
+    //print('Interceptor: $interceptors');
+    if (!interceptors.contains(_authInterceptor)) {
+      interceptors.add(_authInterceptor);
+    }
     return this;
   }
 
